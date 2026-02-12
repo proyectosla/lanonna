@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arepas La Nonna - Catálogo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <img src="logos.png" alt="Logo La Nonna" class="logo">
+    </header>
+
+    <div class="info-bar">
+        <p>🕒 Pedir con anticipación • ❄️ 5 días refrigeradas / 30 días congeladas • 🥣 100% Maíz Pilado Blanco</p>
+    </div>
+
+    <section class="carousel-container">
+        <div class="carousel" id="carousel">
+            <img src="arepa1.png" alt="Arepa 1" onclick="openZoom(this.src)">
+            <img src="arepa2.png" alt="Arepa 2" onclick="openZoom(this.src)">
+            <img src="arepa3.png" alt="Arepa 3" onclick="openZoom(this.src)">
+            <img src="arepa4.png" alt="Arepa 4" onclick="openZoom(this.src)">
+        </div>
+    </section>
+
+    <main id="product-container" class="container"></main>
+
+
+    <section class="order-summary-bar">
+        <div class="summary-content">
+            <div class="total-text">
+                <small>Total Pedido:</small>
+                <h3 id="grand-total">$0</h3>
+            </div>
+            <button id="btn-open-modal" class="btn-primary">Solicitar Pedido</button>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <p><i class="fab fa-instagram"></i> @la_nonna.vr</p>
+            <p><i class="fas fa-location-dot"></i> Villa del Rosario, Norte de Santander</p>
+            <p>Arepas La Nonna</p>
+            <p>2025</p>
+            <p>&copy; By L.A. </p>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/573025990381" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i> Escríbenos
+    </a>
+
+    <div id="zoom-modal" class="modal-zoom" onclick="this.style.display='none'">
+        <img id="img-zoom" src="">
+    </div>
+
+    <div id="order-modal" class="modal-form">
+        <div class="modal-content">
+            <h2>Resumen del Pedido</h2>
+            <div id="order-details-list"></div>
+            <div class="modal-total-box">
+                Total a Pagar: <span id="modal-total-amount">$0</span>
+            </div>
+            <input type="text" id="client-name" placeholder="Tu Nombre completo" required>
+            <input type="tel" id="client-phone" placeholder="Tu Teléfono (WhatsApp)" required>
+            <div class="modal-actions">
+                <button onclick="closeOrderModal()" class="btn-secondary">Volver</button>
+                <button onclick="sendOrder()" class="btn-confirm">Confirmar Pedido</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

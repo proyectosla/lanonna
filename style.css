@@ -1,0 +1,41 @@
+:root {
+    --azul: #0a1f3d;
+    --dorado: #d4a373;
+    --gris: #f4f7f6;
+    --blanco: #ffffff;
+}
+
+body { font-family: sans-serif; margin: 0; background: var(--gris); padding-bottom: 120px; }
+
+header { background: var(--blanco); text-align: center; padding: 15px; border-bottom: 2px solid var(--dorado); }
+.logo { height: 200px; }
+
+.info-bar { background: var(--azul); color: white; text-align: center; padding: 10px; font-size: 0.8rem; line-height: 1.4; }
+
+/* Carrusel */
+.carousel-container { display: flex; overflow-x: auto; padding: 15px; gap: 12px; scroll-snap-type: x mandatory; }
+.carousel-container img { width: 160px; height: 160px; object-fit: cover; border-radius: 15px; border: 2px solid var(--dorado); scroll-snap-align: start; }
+
+/* Tarjetas */
+.container { padding: 15px; }
+.card { background: var(--blanco); border-radius: 12px; padding: 20px; margin-bottom: 15px; border-top: 5px solid var(--dorado); box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+.card h3 { color: var(--azul); margin: 0 0 10px 0; }
+.price { font-size: 1.25rem; font-weight: bold; color: var(--azul); }
+.qty-input { width: 80px; padding: 10px; border: 1px solid var(--dorado); border-radius: 8px; font-size: 1rem; }
+
+/* Barra Inferior (ALINEADA A LA IZQUIERDA) */
+.order-summary-bar { position: fixed; bottom: 0; width: 100%; background: var(--blanco); border-top: 3px solid var(--azul); padding: 15px 20px; box-sizing: border-box; z-index: 900; }
+.summary-content { display: flex; justify-content: flex-start; align-items: center; gap: 30px; }
+.total-text h3 { margin: 0; font-size: 1.6rem; color: var(--azul); }
+
+.btn-primary { background: var(--azul); color: white; border: none; padding: 12px 25px; border-radius: 30px; font-weight: bold; cursor: pointer; }
+
+/* Modales */
+.modal-form, .modal-zoom { display: none; position: fixed; z-index: 2000; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); align-items: center; justify-content: center; }
+.modal-content { background: white; padding: 25px; width: 90%; max-width: 450px; border-radius: 20px; text-align: center; }
+.modal-total-box { background: var(--gris); padding: 15px; margin: 15px 0; font-weight: bold; font-size: 1.3rem; border: 2px dashed var(--dorado); color: var(--azul); }
+.modal-content input { width: 100%; padding: 12px; margin: 10px 0; border: 1px solid #ccc; border-radius: 10px; box-sizing: border-box; }
+
+.whatsapp-float { position: fixed; bottom: 100px; right: 20px; background: #25d366; color: white; padding: 12px 20px; border-radius: 50px; text-decoration: none; font-weight: bold; z-index: 1000; }
+
+footer { background: var(--azul); color: white; text-align: center; padding: 30px 15px; margin-top: 20px; }
